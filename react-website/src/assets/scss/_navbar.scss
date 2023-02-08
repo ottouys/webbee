@@ -1,0 +1,50 @@
+nav{
+    background-color:white;
+    box-shadow: none;    
+
+    .nav-wrapper{
+        @include flexbox;;
+        @include align-items(center);
+
+        .brand-logo{
+            position: relative;
+            @include flexbox;;
+            @include align-items(center);
+            left: unset;
+            transform: unset;
+
+            img{
+                max-height: 35px;
+            }
+
+            h1.title{
+                color:$colorPrimary;
+                font-size: 24px;
+                padding-left: 20px;
+                display: inline-block;
+                margin: 0;
+            }
+        }
+
+        a.sidenav-trigger{
+            color:$colorPrimary;
+            float: none;
+            position: relative;
+            margin-left: auto;
+        }
+
+        ul#nav-mobile{
+            margin-left: auto;
+
+            li{
+                a{
+                    color:$colorPrimary;
+
+                    &:hover{
+                        background-color:transparent;
+                    }
+                }
+            }
+        }
+    }
+}
